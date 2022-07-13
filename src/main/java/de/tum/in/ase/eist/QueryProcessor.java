@@ -13,10 +13,26 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "konstantin";
-        } else {
-            //hello World
+        } else if (query.contains("plus")) {
+            //query = "what is 9 plus 15"
+            String[] wordList = query.split(" "); //nach jedem Leerzeichen werden die Strings separiert ->DAadruch
+            int sum = 0;
 
-            return "";
+            for (String word : wordList){
+                try {
+                    int intOfWord = Integer.parseInt(word);
+                    sum += intOfWord;
+                } catch(Exception e){
+                    //
+            }
+                return String.valueOf(sum);
+        }
+           // Integer.parseInt("myString 2");
+            //query.length(); //für >10
+            //String nine = query.substring(8, 1);
+           // int result = Integer.parseInt(nine);
+           // return String.valueOf(result);
+
         }
     }
 }

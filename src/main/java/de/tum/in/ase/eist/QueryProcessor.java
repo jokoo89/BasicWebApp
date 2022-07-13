@@ -15,6 +15,7 @@ public class QueryProcessor {
            return "MyTeam";
         } else { //
             //hello World
+
             // TODO extend the programm here
             return "";
         }
